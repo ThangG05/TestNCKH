@@ -13,11 +13,23 @@
     <header class="header">
         <div class="header-container">
             <div class="header-content">
-                <svg class="header-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-                    fill="none" stroke="currentColor" stroke-width="2" role="img" aria-label="Biểu tượng tài liệu">
-                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-                </svg>
+               <svg class="header-icon" 
+     xmlns="http://www.w3.org/2000/svg" 
+     width="32" height="32" 
+     viewBox="0 0 24 24" 
+     fill="none" 
+     stroke="currentColor" 
+     stroke-width="2" 
+     stroke-linecap="round" 
+     stroke-linejoin="round" 
+     role="img" 
+     aria-label="Biểu tượng bản đồ">
+  <polygon points="1 6 8 3 16 6 23 3 23 18 16 21 8 18 1 21 1 6"></polygon>
+  <line x1="8" y1="3" x2="8" y2="18"></line>
+  <line x1="16" y1="6" x2="16" y2="21"></line>
+
+</svg>
+
                 <div>
                     <h1 class="header-title">Hướng Dẫn Chi Tiết</h1>
                     <p class="header-subtitle">Làm theo từng bước để hoàn thành quy trình</p>
@@ -53,6 +65,7 @@
                 <li><button class="toc-link" data-section="cach-3">3. Gửi bài tập qua email học sinh</button></li>
                 <li><button class="toc-link" data-section="theodoi">4. Theo dõi kết quả của học sinh</button></li>
                 <li><button class="toc-link" data-section="xoalink">5. Reset trạng thái trước khi tạo bài tập mới</button></li>
+                <li><button class="toc-link" data-section="luuy">6.Lưu ý</button></li>
             </ul>
         </section>
 
@@ -197,6 +210,32 @@
                     data-placeholder="Ảnh Bước 5.2: Kết quả sau xóa thành công">
             </div>
         </section>
+
+         <section class="step" id="luu-y">
+                <div class="step-header">
+                    <div class="step-number">6</div>
+                    <h2 class="step-title">Lưu ý</h2>
+                </div>
+                <div class="step-content">
+                    <div class="note note-error">
+                        <h4 class="note-title">Tình trạng không update được điểm</h4>
+                        <ul class="note-list">
+                            <li>Nhập tên vào form không khớp với email gửi</li>
+                            <li>Làm nhầm link ( có thể ) </li>
+                            <li>Quên không submit :))</li>
+                        </ul>
+                    </div>
+
+                    <div class="note note-warning">
+                        <h4 class="note-title">Tình trạng báo lỗi "Vượt quá thời gian thực thi tối đa"</h4>
+                        <ul class="note-list">
+                            <li>Click tạo bài tập xong để đó đi chơi , khi quay lại kiểm tra thì đã tạo xong nhưng chưa chọn <strong>OK</strong></li>
+                            <li>Có thể đôi lúc do đường truyền mạng or nhấn tạo bài tập trong 1 khoảng thời gian liên tục nhiều quá nó không chịu được</li>
+                            <li>F5 lại và đợi khoảng vài phút rồi tạo lại</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
     </main>
 
     <footer class="footer">
