@@ -1,0 +1,652 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    /* Đổi font nhẹ nhàng hơn */
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f4f7f9; /* Màu nền nhẹ hơn */
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+/* ============= HEADER ============= */
+.header {
+    background-color: #ffffff;
+    /* Bóng đổ nổi bật hơn */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    border-bottom: 1px solid #e5e7eb; /* Thêm đường viền mỏng */
+}
+
+.header-container {
+    max-width: 56rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Tăng khoảng cách */
+}
+
+.header-icon {
+    width: 2.25rem; /* Tăng kích thước icon */
+    height: 2.25rem;
+    color: #1d4ed8; /* Màu xanh đậm hơn */
+    flex-shrink: 0;
+}
+
+.header-title {
+    font-size: 1.35rem; /* Tăng kích thước chữ */
+    font-weight: 700;
+    color: #111827;
+}
+
+.header-subtitle {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+/* ============= MAIN CONTENT ============= */
+.main-container {
+    max-width: 56rem;
+    margin: 0 auto;
+    padding: 2.5rem 1rem; /* Tăng padding trên/dưới */
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; /* Tăng khoảng cách giữa các phần lớn */
+}
+
+/* ============= INTRODUCTION ============= */
+.introduction {
+    margin-bottom: 1.5rem;
+}
+
+.page-title {
+    font-size: 2.25rem; /* Tăng kích thước chữ */
+    font-weight: 800; /* Đậm hơn */
+    color: #111827;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.page-description {
+    font-size: 1.05rem;
+    color: #4b5563;
+    line-height: 1.7;
+}
+
+/* ============= TABLE OF CONTENTS ============= */
+.toc-section {
+    background-color: #f7f9fc; /* Nền trắng xanh nhẹ */
+    border: 1px solid #dbeafe; /* Thêm border nhẹ */
+    border-left: 5px solid #2563eb; /* Đường viền xanh đậm hơn */
+    padding: 1.5rem;
+    border-radius: 0.5rem; /* Bo góc đầy đủ */
+    margin-bottom: 2.5rem;
+}
+
+.toc-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.toc-icon {
+    color: #2563eb;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+}
+
+.toc-title {
+    font-size: 1.25rem; /* Tăng kích thước chữ */
+    font-weight: 700;
+    color: #111827;
+}
+
+.toc-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem; /* Giảm khoảng cách giữa các link để dễ quét hơn */
+}
+
+.toc-link {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0.6rem 0.9rem; /* Tăng padding */
+    border-radius: 0.375rem;
+    background-color: transparent;
+    color: #1d4ed8;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); /* Transition mượt mà hơn */
+    font-family: inherit;
+    font-weight: 500;
+}
+
+.toc-link:hover {
+    background-color: #e0f2fe; /* Màu xanh nhạt hơn khi hover */
+    color: #1e40af;
+}
+
+.toc-link.active {
+    background-color: #2563eb;
+    color: #ffffff;
+    font-weight: 600; /* Đậm hơn khi active */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* ============= STEP ============= */
+.step {
+    background-color: #ffffff;
+    border-radius: 0.75rem; /* Bo góc lớn hơn */
+    /* Bóng đổ tinh tế hơn */
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    margin-bottom: 4rem; /* Tăng khoảng cách */
+    scroll-margin-top: 6rem; /* Tăng scroll margin */
+    border: 1px solid #f3f4f6; /* Viền mỏng */
+}
+
+.step-header {
+    /* Gradient nổi bật hơn */
+    background: linear-gradient(to right, #1d4ed8, #2563eb); 
+    padding: 1.5rem 2rem; 
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.step-number {
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 2.75rem; /* Tăng kích thước số */
+    height: 2.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #2563eb;
+    flex-shrink: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.step-title {
+    font-size: 1.4rem; /* Tăng kích thước chữ */
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.step-content {
+    padding: 2rem; /* Tăng padding */
+}
+
+.step-intro {
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+/* ============= SUBSTEP ============= */
+.substep {
+    margin-bottom: 2.5rem;
+    padding-left: 1.25rem;
+    border-left: 3px solid #bfdbfe; /* Viền dày và nhẹ hơn */
+}
+
+.substep-header {
+    display: flex;
+    align-items: flex-start; /* Căn chỉnh lại */
+    gap: 0.6rem;
+    margin-bottom: 0.75rem;
+}
+
+.substep-icon {
+    color: #1e40af; /* Màu icon đậm hơn */
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+    width: 18px;
+    height: 18px;
+}
+
+.substep-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.substep-content {
+    margin-left: 2rem; /* Tăng khoảng cách */
+    color: #4b5563;
+    line-height: 1.65;
+    font-size: 1rem;
+}
+
+.substep-content p {
+    margin-bottom: 0.75rem;
+}
+
+.note-text {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-top: 0.75rem;
+}
+
+.step-list {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+    list-style: disc;
+    color: #4b5563;
+}
+
+.step-list li {
+    margin-bottom: 0.5rem;
+}
+
+.nested-list {
+    margin-top: 0.75rem;
+    margin-left: 1.5rem;
+    list-style: circle;
+}
+
+.nested-list li {
+    margin-bottom: 0.5rem;
+}
+
+/* ============= STEP IMAGES ============= */
+.step-image {
+    width: 100%;
+    max-width: 700px; /* Tăng max-width */
+    height: auto;
+    border-radius: 0.5rem;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Bóng đổ hình ảnh */
+    margin-top: 1.5rem;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.step-image:hover {
+    transform: translateY(-2px); /* Hiệu ứng nhẹ khi hover */
+}
+
+.step-image[src=""],
+.step-image:not([src]) {
+    background-color: #e5e7eb; /* Màu nền placeholder */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 250px; /* Tăng min-height */
+    color: #9ca3af;
+    font-size: 1rem;
+    text-align: center;
+    padding: 2rem;
+    font-style: italic;
+}
+
+/* ============= NOTES ============= */
+.note {
+    border-left: 5px solid; /* Viền dày hơn */
+    padding: 1.25rem;
+    border-radius: 0.5rem; /* Bo góc đầy đủ */
+    margin: 1.5rem 0;
+    font-size: 0.95rem;
+}
+
+.note-title {
+    font-weight: 700; /* Đậm hơn */
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+}
+
+.note-list {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.note-list li {
+    margin-bottom: 0.3rem;
+}
+
+/* Note Variants - Màu sắc tươi hơn */
+.note-info {
+    background-color: #e0f2fe;
+    border-left-color: #0c4a6e; /* Xanh đậm */
+    color: #0c4a6e;
+}
+
+.note-info .note-title {
+    color: #0c4a6e;
+}
+
+.note-warning {
+    background-color: #fffbeb;
+    border-left-color: #b45309; /* Cam đậm */
+    color: #b45309;
+}
+
+.note-warning .note-title {
+    color: #b45309;
+}
+
+.note-success {
+    background-color: #ecfdf5;
+    border-left-color: #065f46; /* Xanh lá đậm */
+    color: #065f46;
+}
+
+.note-success .note-title {
+    color: #065f46;
+}
+
+.note-error {
+    background-color: #fef2f2;
+    border-left-color: #991b1b; /* Đỏ đậm */
+    color: #991b1b;
+}
+
+.note-error .note-title {
+    color: #991b1b;
+}
+
+/* ============= CONGRATULATION BOX ============= */
+.congratulation-box {
+    /* Gradient nổi bật hơn */
+    background: linear-gradient(to right, #f0fdf4, #dbeafe);
+    padding: 2rem;
+    border-radius: 0.75rem;
+    border: 2px solid #86efac;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-top: 3rem;
+}
+
+.congratulation-title {
+    font-weight: 800;
+    font-size: 1.25rem;
+    color: #111827;
+    margin-bottom: 1rem;
+}
+
+.congratulation-box p {
+    color: #374151;
+    line-height: 1.7;
+}
+
+/* ============= FOOTER ============= */
+.footer {
+    background-color: #1f2937; /* Màu chân trang đậm hơn */
+    color: #d1d5db;
+    margin-top: 5rem;
+}
+
+.footer-container {
+    max-width: 56rem;
+    margin: 0 auto;
+    padding: 2.5rem 1rem;
+    text-align: center;
+}
+
+.footer-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.footer-heart {
+    color: #f87171; /* Màu đỏ tươi hơn */
+    animation: pulse 1.5s infinite; /* Thêm hiệu ứng nhịp đập */
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.footer-copyright {
+    font-size: 0.8rem;
+    color: #9ca3af;
+    margin-top: 0.75rem;
+}
+
+/* ============= RESPONSIVE ============= */
+@media (max-width: 640px) {
+    .page-title {
+        font-size: 1.75rem;
+    }
+
+    .step-header {
+        padding: 1.25rem;
+    }
+
+    .step-number {
+        width: 2.25rem;
+        height: 2.25rem;
+        font-size: 1.1rem;
+    }
+
+    .step-title {
+        font-size: 1.25rem;
+    }
+
+    .step-content {
+        padding: 1.25rem;
+    }
+
+    .header-title {
+        font-size: 1.25rem;
+    }
+
+    .toc-section {
+        padding: 1.25rem;
+    }
+
+    .main-container {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .substep {
+        padding-left: 0.75rem;
+    }
+
+    .substep-content {
+        margin-left: 1.75rem;
+    }
+}
+/* ============= CHATBOT STYLES ============= */
+
+/* Floating Action Button */
+.chatbot-fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #2563eb; /* Màu chủ đạo */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.chatbot-fab:hover {
+    background-color: #1d4ed8;
+    transform: scale(1.05);
+}
+
+/* Chatbot Window */
+.chatbot-container {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 340px;
+    height: 450px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    overflow: hidden;
+    transform: translateY(10px) scale(0.9);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.chatbot-container.open {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Header */
+.chatbot-header {
+    background: linear-gradient(to right, #1d4ed8, #2563eb);
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 700;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.chatbot-close-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+}
+
+.chatbot-close-btn:hover {
+    opacity: 1;
+}
+
+/* Body (Khu vực tin nhắn) */
+.chatbot-body {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #f7f9fc;
+}
+
+/* Tin nhắn */
+.message {
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    max-width: 80%;
+    line-height: 1.4;
+    font-size: 0.95rem;
+}
+
+.user-message {
+    background-color: #2563eb;
+    color: white;
+    align-self: flex-end;
+    margin-left: auto;
+    border-bottom-right-radius: 2px;
+}
+
+.bot-message {
+    background-color: #e5e7eb;
+    color: #1f2937;
+    align-self: flex-start;
+    margin-right: auto;
+    border-bottom-left-radius: 2px;
+}
+
+/* Footer (Khu vực nhập liệu) */
+.chatbot-footer {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #e5e7eb;
+    background-color: #ffffff;
+}
+
+#chatInput {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 20px;
+    margin-right: 10px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+#chatInput:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+#sendMessage {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#sendMessage:hover {
+    background-color: #1d4ed8;
+}
+
+/* Responsive cho màn hình nhỏ */
+@media (max-width: 640px) {
+    .chatbot-container {
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        right: 0;
+        border-radius: 0;
+        box-shadow: none;
+        max-width: none;
+    }
+    .chatbot-fab {
+        bottom: 10px;
+        right: 10px;
+    }
+}
